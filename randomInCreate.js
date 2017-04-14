@@ -1,16 +1,20 @@
-//binary random interger
-//save file as randomInCreate.js
-//to run type "node randomInCreate.js"
-var randomInteger = function(val) {
+// binary random Integer
+// save file as randomInCreate.js
+// to run type "node randomInCreate.js"
+var randomInteger = function() {
 	var ival = Math.random()*256;
+	// console.log(ival);
 	ival = Math.floor(ival);
 	return ival;
 }
-//main
-var rInt ;
-var i;
-for (i = 0; i < 65; i++){
+// main 
+var i, rInt ; 
+var tst = 2;
+for (i = 0; i < 65536; i++){
 rInt	= randomInteger();
-//consle.log(rInt+".");
+if (rInt == 2)tst++;
+// console.log(rInt+" ");
+
 process.stdout.write(rInt+",");
 }
+console.log("\n\n Count 2 = "+tst);
